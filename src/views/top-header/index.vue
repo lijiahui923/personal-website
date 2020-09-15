@@ -2,25 +2,25 @@
     <el-container>
         <el-header class="nav-header">
             <el-row class="nav">
-                <el-col :xs="0" :sm="8" :lg="10">
+                <el-col :xs="0" :sm="10" :md="10" :lg="10">
                     <div class="header-nav">
                         <ul>
-                            <li>主站</li>
-                            <li>个人导航</li>
-                            <li>文档系统</li>
-                            <li>微博</li>
-                            <li>下载APP</li>
+                            <li><svg-icon icon-class="main"></svg-icon>主站</li>
+                            <li><svg-icon icon-class="nav"></svg-icon>个人导航</li>
+                            <li><svg-icon icon-class="document"></svg-icon>文档系统</li>
+                            <li><svg-icon icon-class="weibo"></svg-icon>微博</li>
+                            <li><svg-icon icon-class="iphone"></svg-icon>下载APP</li>
                         </ul>
                     </div>
                 </el-col>
-                <el-col :xs="18" :sm="12" :lg="10">
+                <el-col :xs="18" :sm="10"  :md="10" :lg="10">
                     <div class="header-input">
                         <el-input placeholder="请输入内容">
                             <el-button slot="append" icon="el-icon-search"></el-button>
                             </el-input>
                     </div>
                 </el-col>
-                <el-col :xs="6" :sm="4" :lg="4">
+                <el-col :xs="6" :sm="4" :md="4" :lg="4">
                     <div class="header-user">
                         <a href="#" class="headphoto">
                             <img src="../../assets/images/headphoto.png"/>
@@ -58,7 +58,6 @@ export default {
 <style lang="scss" scoped>
 .nav-header {
     width: 100%;
-    color: pink;
     min-height: 155px;
     background: url(../../assets/images/npBl.png) no-repeat center 0;
 }
@@ -69,6 +68,9 @@ export default {
 .header-nav ul{
     display: flex;
     justify-content: space-around;
+    font-size: 18px;
+    font-weight: 600;
+    color: #666;
 }
 .header-user {
     display: flex;

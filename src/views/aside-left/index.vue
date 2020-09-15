@@ -4,9 +4,9 @@
         <div class="user-info">
             <div class="user-bg"></div>
             <div class="user-photo">
-                <!-- <a class="user-photo-border">
-                    <span><img src="../../assets/images/headphoto.png"/></span>
-                </a> -->
+                <span class="user-photo-border">
+                    <img src="../../assets/images/headphoto.png" />
+                </span>
             </div>
             <div class="user-name">我会瘦的</div>
             <div class="user-statistical">
@@ -27,12 +27,12 @@
             </div>
             <div>
             <div class="user-other-link">
-                <span class="user-other-link-item">1</span>
-                <span class="user-other-link-item">1</span>
-                <span class="user-other-link-item">1</span>
-                <span class="user-other-link-item">1</span>
-                <span class="user-other-link-item">1</span>
-                <span class="user-other-link-item">1</span>
+                <span class="user-other-link-item"><svg-icon icon-class="github"></svg-icon></span>
+                <span class="user-other-link-item"><svg-icon icon-class="barrage"></svg-icon></span>
+                <span class="user-other-link-item"><svg-icon icon-class="bird"></svg-icon></span>
+                <span class="user-other-link-item"><svg-icon icon-class="zhihu"></svg-icon></span>
+                <span class="user-other-link-item"><svg-icon icon-class="steam"></svg-icon></span>
+                <span class="user-other-link-item"><svg-icon icon-class="bilibili"></svg-icon></span>
             </div>
             </div>
         </div>
@@ -70,6 +70,7 @@ export default {
     background: #fff;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+    position: relative;
 }
 .user-bg {
     height: 120px;
@@ -79,6 +80,31 @@ export default {
 }
 .user-photo {
     height: 52px;
+}
+.user-photo-border {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: transform .2s;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, .5);
+    & img {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+    }
+}
+.user-photo-border:hover {
+    transform: translate(-50%,-50%) rotateZ(360deg);
+    width: 130px;
+    height: 130px;
+    & img {
+        width: 130px;
+        height: 130px;
+    }
 }
 .user-statistical {
     font-size: 18px;

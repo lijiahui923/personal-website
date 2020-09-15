@@ -10,11 +10,11 @@ const routes = [
     name: "Index",
     component: Home,
     children: [
-      {
-        path: "/user",
-        name: "User",
-        component: () => import("../views/user/index")
-      },
+      // {
+      //   path: "/user",
+      //   name: "User",
+      //   component: () => import("../views/user/index")
+      // },
       // 安全设置 - 首页
       // {
       //   path: "/safe",

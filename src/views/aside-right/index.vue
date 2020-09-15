@@ -10,14 +10,14 @@
           <h3 class="right-title">更多功能</h3>
           <div class="right-more">
               <ul class="more-link">
-                  <li class="more-link-item"><a href="#">日记</a></li>
-                  <li class="more-link-item"><a href="#">赞助博主</a></li>
-                  <li class="more-link-item"><a href="#">友人帐</a></li>
-                  <li class="more-link-item"><a href="#">我的追番</a></li>
-                  <li class="more-link-item"><a href="#">弹幕留言墙</a></li>
-                  <li class="more-link-item"><a href="#">我的豆瓣</a></li>
-                  <li class="more-link-item"><a href="#">我的项目</a></li>
-                  <li class="more-link-item"><a href="#">个人简介</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="diary"></svg-icon>日记</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="sponsors"></svg-icon>赞助博主</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="uphand"></svg-icon>友人帐</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="devil"></svg-icon>我的追番</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="communication"></svg-icon>弹幕留言墙</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="douban"></svg-icon>我的豆瓣</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="project"></svg-icon>我的项目</a></li>
+                  <li class="more-link-item"><a href="#"><svg-icon icon-class="Introduction"></svg-icon>个人简介</a></li>
               </ul>
           </div>
       </div>
@@ -67,8 +67,12 @@ export default {
 .more-link {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
     & .more-link-item {
         width: 50%;
+        height: 60px;
+        font-size: 18px;
+        font-weight: 600;
     }
 }
 </style>

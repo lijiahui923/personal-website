@@ -3,8 +3,7 @@
         <el-main　class="conent">
             <div class="conent-header">
                 <div class="conent-header-left">
-                    <!-- <p>1</p>
-                    <span>首页</span> -->
+                    <svg-icon icon-class="home"></svg-icon>
                     <span>首页</span>
                 </div>
                 <div class="conent-header-right">
@@ -24,45 +23,17 @@
             <div class="content-panel">
                 <div class="panel-wrapper">
                     <h4 class="panel-title">go Echo框架集成Swagger 自动生成api文档</h4>
-                    <p class="pancel-desc">
-                        之前的api文档一直都是手写的，使用起来非常麻烦，所以我打算采用swagger来自动生成api文档，
-                        减少我的工作量同时接口更新后文档也能自动更新，减少自己维护文档的麻烦，废话不多说，直接开始集成。
-                    </p>
-                    <div　class="panel-footer">
-                        <span class="panel-footer-time">2020-09-15</span>
-                        <span class="panel-footer-comments">23评论</span>
-                        <span class="panel-footer-read">23阅读</span>
-                        <span class="panel-footer-givelove">12人点赞</span>
-                    </div>
-                </div>
-            </div>
-            <div class="content-panel">
-                <div class="panel-wrapper">
-                    <h4 class="panel-title">go Echo框架集成Swagger 自动生成api文档</h4>
-                    <p class="pancel-desc">
-                        之前的api文档一直都是手写的，使用起来非常麻烦，所以我打算采用swagger来自动生成api文档，
-                        减少我的工作量同时接口更新后文档也能自动更新，减少自己维护文档的麻烦，废话不多说，直接开始集成。
-                    </p>
-                    <div　class="panel-footer">
-                        <span class="panel-footer-time">2020-09-15</span>
-                        <span class="panel-footer-comments">23评论</span>
-                        <span class="panel-footer-read">23阅读</span>
-                        <span class="panel-footer-givelove">12人点赞</span>
-                    </div>
-                </div>
-            </div>
-            <div class="content-panel">
-                <div class="panel-wrapper">
-                    <h4 class="panel-title">go Echo框架集成Swagger 自动生成api文档</h4>
-                    <p class="pancel-desc">
-                        之前的api文档一直都是手写的，使用起来非常麻烦，所以我打算采用swagger来自动生成api文档，
-                        减少我的工作量同时接口更新后文档也能自动更新，减少自己维护文档的麻烦，废话不多说，直接开始集成。
-                    </p>
-                    <div　class="panel-footer">
-                        <span class="panel-footer-time">2020-09-15</span>
-                        <span class="panel-footer-comments">23评论</span>
-                        <span class="panel-footer-read">23阅读</span>
-                        <span class="panel-footer-givelove">12人点赞</span>
+                    <div class="is-hidden">
+                        <p class="pancel-desc">
+                            之前的api文档一直都是手写的，使用起来非常麻烦，所以我打算采用swagger来自动生成api文档，
+                            减少我的工作量同时接口更新后文档也能自动更新，减少自己维护文档的麻烦，废话不多说，直接开始集成。
+                        </p>
+                        <div　class="panel-footer">
+                            <span class="panel-footer-time"><svg-icon icon-class="time"></svg-icon>2020-09-15</span>
+                            <span class="panel-footer-comments"><svg-icon icon-class="comments"></svg-icon>23评论</span>
+                            <span class="panel-footer-read"><svg-icon icon-class="detail"></svg-icon>23阅读</span>
+                            <span class="panel-footer-givelove"><svg-icon icon-class="givelike"></svg-icon>12人点赞</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -113,12 +84,16 @@ export default {
         border-radius: 5px;
         height: 68px;
         & .conent-header-left {
-            flex: 1;
-            // border-right: 1px solid #666;
-            // padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0 20px;
+            border-right: 1px solid rgba(32, 30, 30, 0.1);
+            & span {
+                margin-top: 10px;
+            }
         }
         & .conent-header-right ul{
-            flex: 4;
             height: 68px;
             display: flex;
             flex-wrap: wrap;
@@ -140,6 +115,7 @@ export default {
         height: 420px;
         border-radius: 10px;
         background: url('./../../assets/images/img459.jpg') center center;
+        background-repeat: no-repeat;
         margin: 20px 0;
         & .panel-wrapper {
             position: absolute;
