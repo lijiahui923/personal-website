@@ -14,9 +14,6 @@
                         <li>程序人生<span>29</span></li>
                         <li>各种折腾<span>29</span></li>
                         <li>使用内容<span>29</span></li>
-                        <li>程序人生<span>29</span></li>
-                        <li>各种折腾<span>29</span></li>
-                        <li>使用内容<span>29</span></li>
                     </ul>
                 </div>
             </div>
@@ -93,6 +90,9 @@ export default {
                 margin-top: 10px;
             }
         }
+        & .conent-header-left > svg {
+            width: 3.2em;
+        }
         & .conent-header-right ul{
             height: 68px;
             display: flex;
@@ -122,6 +122,9 @@ export default {
             left: 0;
             bottom: 0;
         }
+        & .panel-wrapper:hover>.is-hidden{
+            visibility: unset;
+        }
         & .panel-title {
             font-size: 22px;
             font-weight: 700;
@@ -143,5 +146,8 @@ export default {
             font-weight: 500;
         }
     }
+}
+.is-hidden {
+    visibility: hidden;
 }
 </style>

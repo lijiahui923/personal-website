@@ -59,7 +59,6 @@ export default {
 .nav-header {
     width: 100%;
     min-height: 155px;
-    background: url(../../assets/images/npBl.png) no-repeat center 0;
 }
 .nav {
     height: 60px;
@@ -68,8 +67,6 @@ export default {
 .header-nav ul{
     display: flex;
     justify-content: space-around;
-    font-size: 18px;
-    font-weight: 600;
     color: #666;
 }
 .header-user {
