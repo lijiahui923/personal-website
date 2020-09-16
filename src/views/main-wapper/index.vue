@@ -52,7 +52,7 @@
 @create:lijiahui
 */
 export default {
-  name: 'main-conent',
+  name: 'main-wapper',
   props: {},
   components: {},
   data() {
@@ -67,7 +67,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .mian-part {
-    width: 40%;
     text-align: center;
 }
 .conent {

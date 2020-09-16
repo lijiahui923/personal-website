@@ -1,6 +1,5 @@
 <template>
-  <div>
-      <el-aside class="aside-left">
+    <el-aside class="aside-left">
         <div class="user-info">
             <div class="user-bg"></div>
             <div class="user-photo">
@@ -37,7 +36,6 @@
             </div>
         </div>
     </el-aside>
-  </div>
 </template>
 
 <script>
@@ -62,7 +60,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .aside-left {
-    width: 22%;
+    width: 100% !important;
     text-align: center;
 }
 .user-info {
