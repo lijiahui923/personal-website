@@ -1,5 +1,5 @@
 <template>
-  <el-header class="nav-header" :class="[scrollTop !== 0 ? 'sticky' : '']">
+  <el-header class="nav-header" :class="[]">
         <el-row class="nav">
             <el-col :md="10" :lg="10" :xl="10">
                 <div class="hidden-sm-and-down header-nav">
@@ -56,6 +56,11 @@ export default {
       window.addEventListener('scroll', ()=>{
         //   获取滚动条的位置
         this.scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+        if (this.scrollTop > 200) {
+            document.querySelector('.nav-header').classList.add('sticky');
+        } else if (this.scrollTop === 0) {
+            document.querySelector('.nav-header').classList.remove('sticky');
+        }
     })
   },
   methods: {}

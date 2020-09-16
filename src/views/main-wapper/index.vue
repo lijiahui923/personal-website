@@ -70,7 +70,7 @@ export default {
     text-align: center;
 }
 .conent {
-    min-height: 700px;
+    min-height: 1000px;
     padding: 0 20px;
     width: 100%;
     & .conent-header {
