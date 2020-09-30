@@ -46,7 +46,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .aside-right {
-    width: 22%;
+    width: 100% !important;
 }
 .right-conent {
     background: #fff;

@@ -60,7 +60,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .aside-left {
-    width: 22%;
+    width: 100% !important;
     text-align: center;
 }
 .user-info {
