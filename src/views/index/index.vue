@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="home">
+		<router-view />
 		<topHeader>
 			<el-container class="main">
 				<div class="bg"></div>
@@ -9,6 +10,7 @@
 			</el-container>
 			<botomFooter/>
 		</topHeader>
+		
     </div>
 </template>
 <script>
@@ -29,21 +31,24 @@ export default {
 }
 </script>
 <style lang="scss">
+	.home {
+		@include webkitA(background,linear-gradient(to top, #d299c2, #fef9d7));
+	}
 	.main {
 		min-height: 700px;
 		margin: 25px 20px 78px 20px;
 	}
 	.bg {
-		background: url(../../assets/images/tKb5.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-		background-position: 100% 100%;
-		position: fixed;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
+		// background: url(../../assets/images/tKb5.jpg);
+		// background-size: cover;
+		// background-repeat: no-repeat;
+		// background-position: 100% 100%;
+		// position: fixed;
+		// z-index: -1;
+		// top: 0;
+		// left: 0;
+		// right: 0;
+		// bottom: 0;
 	}
 	
 </style>

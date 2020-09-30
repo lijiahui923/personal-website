@@ -1,30 +1,21 @@
 <template>
 <div id="login" v-if="show">
     <div class="form-wrap">
-        <el-form ref="form" :model="form" :rules="form_rules">
-        <el-form-item prop="name">
-            <label class="form-label">用户名</label>
-            <el-input v-model="form.name"></el-input>
-        </el-form-item>
-        <el-form-item prop="password">
-            <label class="form-label">密码</label>
-            <el-input type="password" v-model="form.password"></el-input>
-        </el-form-item>
-        <el-form-item prop="code">
-            <label class="form-label">验证码</label>
-            <el-row :gutter="10">
-            <el-col :span="14">
-                <el-input v-model="form.code"></el-input>
-            </el-col>
-            <el-col :span="10">
-                <el-button type="success" class="el-button-block" @click="getCodeFn()" :disabled="code_disabled" :loading="code_loading">{{ code_text }}</el-button>
-            </el-col>
-            </el-row>
-        </el-form-item>
-        <el-form-item>
-            <el-button type="danger" class="el-button-block" style="width: 100%" :disabled="submit_disabled" @click="submitForm('form')">登录</el-button>
-        </el-form-item>
+        <div class="login-header">Login</div>
+        <el-form :model="form" :rules="form_rules" ref="form" label-position="left" class="login-form">
+            <el-form-item prop="name">
+                <el-input class="loginInput" v-model="form.name" placeholder="USERNAME" clearable></el-input>
+            </el-form-item>
+            <el-form-item prop="password">
+                <el-input class="loginInput" type="password" autocomplete="new-password" v-model="form.password" placeholder="PASSWORD" clearable></el-input>
+            </el-form-item>
+            <el-form-item>
+                <el-button class="login-btn" style="width: 100%" :disabled="submit_disabled" @click="submitForm('form')">Login</el-button>
+            </el-form-item>
         </el-form>
+        <div class="msg">
+            Don't have account?<router-link class="msg-a" to="/">Sign Up</router-link>
+        </div>
     </div>
 </div>
 </template>
@@ -77,6 +68,7 @@ export default {
         }
         // 检验规则
         return {
+            activeName:'login',
             show: false,
             form: {
                 name: "",
@@ -189,44 +181,53 @@ export default {
             setToken(data.token);
             this.show = false;
         })
-    }
+    },
+    handleClick () {}
   }
 };
 </script>
 <style lang="scss" scoped>
 #login {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99999;
     height: 100vh;
-    background-color: rgba(0, 0, 0, .7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include webkitA(background,linear-gradient(to right, #fbc2eb,#a6c1ee));
+    font-family: 'Open Sans Light';
+    // 增加字符之前的空白
+    letter-spacing: .05em;
 }
 .form-wrap {
-  width: 300px;
-  padding-top: 100px;
-  margin: auto;
+  width: 350px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;;
 }
-.menu-tab {
-  text-align: center;
-  li {
-    display: inline-block;
-    padding: 10px 24px;
-    margin: 0 10px;
+.login-header {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 200px;
+} 
+.login-form {
+    width: 80%;
+    margin-bottom: 30px;
+}
+.login-btn {
     color: #fff;
-    font-size: 14px;
-    border-radius: 5px;
-    cursor: pointer;
-    &.current { background-color: rgba(0, 0, 0, .1);}
-  }
+    @include webkitA(background,linear-gradient(to left, #fbc2eb,#a6c1ee));
 }
-.form-label {
-  display: block;
-  color: #fff;
-  font-size: 14px;
+.msg-a {
+    padding-left: 10px;
+    color: #a6c1ee;
 }
 </style>
 <style lang="scss">
 .el-message.el-message--success { z-index: 100000 !important; }
+.login-btn .el-button.is-disabled, .el-button.is-disabled:focus, .el-button.is-disabled:hover {
+    outline: none;
+    @include webkitA(background,linear-gradient(to left, #fbc2eb,#a6c1ee));
+}
 </style>

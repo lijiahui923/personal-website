@@ -23,7 +23,7 @@ $color-blur: #b5dcf3;
     #{$type}: $value;
 }
 
-@mixin webkitA($type, $value) {  // A => after
+@mixin webkitA($type, $value) {
     #{$type}: -webkit-#{$value};
     #{$type}: -moz-#{$value};
     #{$type}: -ms-#{$value};

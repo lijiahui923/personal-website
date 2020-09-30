@@ -11,9 +11,9 @@ const routes = [
     component: Home,
     children: [
       // {
-      //   path: "/user",
-      //   name: "User",
-      //   component: () => import("../views/user/index")
+      //   path: "/login",
+      //   name: "Login",
+      //   component: () => import("../views/index/login")
       // },
       // 安全设置 - 首页
       // {
@@ -27,7 +27,8 @@ const routes = [
       //   component: () => import("../views/safe/password")
       // }
     ]
-  }
+  },
+  { path: '/login',component: () => import("../views/index/login")}
 ];
 
 const router = new VueRouter({

@@ -17,7 +17,7 @@
                     <div class="header-input">
                         <el-input placeholder="请输入内容">
                             <el-button slot="append" icon="el-icon-search"></el-button>
-                            </el-input>
+                        </el-input>
                     </div>
                 </el-col>
                 <el-col :xs="6" :sm="4" :md="4" :lg="4">
@@ -25,7 +25,7 @@
                         <a href="#" class="headphoto">
                             <img src="../../assets/images/headphoto.png"/>
                         </a>
-                        <div>登录</div>
+                        <router-link to="/login">登录</router-link>
                         <div>注册</div>
                     </div>
                 </el-col>
@@ -67,6 +67,8 @@ export default {
 .header-nav ul{
     display: flex;
     justify-content: space-around;
+    font-size: 14px;
+    font-weight: 600;
     color: #666;
 }
 .header-user {
